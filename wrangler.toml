@@ -1,5 +1,6 @@
 name = "baiguo-music"
 compatibility_date = "2024-12-01"
+main = "worker.ts"
 
 [assets]
 directory = "./dist"
