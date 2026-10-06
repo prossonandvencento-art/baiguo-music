@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: #08080b;
+    color: #f4f4f6;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Accent Gradients & Glows */
+.accent-gradient {
+  background: linear-gradient(135deg, #89aacc 0%, #4e85bf 100%);
+}
+
+.accent-glow {
+  box-shadow: 0 0 30px rgba(78, 133, 191, 0.22);
+}
+
+.card-glow:hover {
+  box-shadow: 0 10px 40px -10px rgba(78, 133, 191, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08080b;
+}
+::-webkit-scrollbar-thumb {
+  background: #23232a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4e85bf;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused !important;
+}
+
+/* Cinematic Cloud Abyss Motion */
+@keyframes ken-burns-hero {
+  0% {
+    transform: scale(1.02) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.09) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1.02) translate(0, 0);
+  }
+}
+
+.animate-ken-burns {
+  animation: ken-burns-hero 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes fog-drift-slow {
+  0% {
+    transform: translateX(-5%) translateY(0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateX(5%) translateY(-2%);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateX(-5%) translateY(0);
+    opacity: 0.35;
+  }
+}
+
+.animate-fog-drift {
+  animation: fog-drift-slow 20s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes golden-rim-breathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+.animate-golden-rim {
+  animation: golden-rim-breathe 8s ease-in-out infinite;
+}

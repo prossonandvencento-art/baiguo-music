@@ -1,0 +1,6 @@
+{
+  "name": "白果音乐 · 个人音乐分享主页",
+  "description": "白果音乐个人专属音乐分享与播放空间，支持在线试听、黑胶唱机互动、音乐手记与自选曲库。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
