@@ -1,0 +1,17 @@
+name = "baiguo-music"
+compatibility_date = "2024-12-01"
+pages_build_output_dir = "dist"
+
+# KV 命名空间 - 存储曲目数据
+[[kv_namespaces]]
+binding = "TRACKS_KV"
+id = "REPLACE_WITH_YOUR_KV_ID"
+
+# R2 存储桶 - 存储上传的音乐和封面
+[[r2_buckets]]
+binding = "MUSIC_BUCKET"
+bucket_name = "baiguo-music"
+
+# 环境变量
+[vars]
+CURATOR_PASSWORD = "tongmen"
